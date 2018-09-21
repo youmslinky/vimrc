@@ -207,4 +207,4 @@ map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 
 
 
-
+colorscheme slate
