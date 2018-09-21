@@ -201,10 +201,13 @@ map <f2>
 map <C-A> <Esc>:%d+<CR>
 
 "yank entire word under cursor to clipboard
-map <C-C> "+yiW
+"map <C-C> "+yiW
 
 map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 
 
-
 colorscheme slate
+
+"copy and paste to system clipboard
+nnoremap <c-c> "+y
+nnoremap <c-p> "+p
