@@ -195,7 +195,7 @@ nnoremap <leader>rv :so $MYVIMRC<cr>
 
 "#######################################################################
 "temporary for doing part numbers
-map <f2> 
+map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 
 "yank and delete all text in file
 map <C-A> <Esc>:%d+<CR>
@@ -203,7 +203,6 @@ map <C-A> <Esc>:%d+<CR>
 "yank entire word under cursor to clipboard
 "map <C-C> "+yiW
 
-map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 
 
 colorscheme slate
