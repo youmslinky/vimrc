@@ -1,24 +1,8 @@
-" youmslinky custom vimrc -------------------------------------------
-""-----------------------------------------------------------------
-""
-"" URL: http://vim.wikia.com/wiki/Example_vimrc
-"set colorscheme
-colo slate
-""              newbie, basing your first .vimrc on this file is a good choice.
-""              If you're a more advanced user, building your own .vimrc based
-""              on this file is still a good idea.
-" 
-""------------------------------------------------------------
-"" Features {{{1
-""
+" youmslinky custom vimrc -----------------------------------------
 "-----------------------------------------------------------------
 "
-" URL: http://vim.wikia.com/wiki/Example_vimrc
-" Authors: http://vim.wikia.com/wiki/Vim_on_Freenode
-" Description: A minimal, but feature rich, example .vimrc. If you are a
-"              newbie, basing your first .vimrc on this file is a good choice.
-"              If you're a more advanced user, building your own .vimrc based
-"              on this file is still a good idea.
+"set colorscheme
+colo slate
 
 "------------------------------------------------------------
 " Features {{{1
@@ -79,15 +63,6 @@ set hlsearch
 " such, it may be a good idea to disable them and use the securemodelines
 " script, <http://www.vim.org/scripts/script.php?script_id=1876>.
 " set nomodeline
-" 
-" 
-""------------------------------------------------------------
-"" Usability options {{{1
-""
-"" These are options that users frequently set in their .vimrc. Some of them
-"" change Vim's behaviour in ways which deviate from the true Vi way, but
-"" which are considered to add usability. Which, if any, of these options to
-"" use is very much a personal preference, but they are harmless.
 
 
 "------------------------------------------------------------
@@ -213,7 +188,6 @@ nnoremap <leader>ev <C-w><C-s><C-l>:e $MYVIMRC<cr>
 
 "reload vimrc
 nnoremap <leader>rv :so $MYVIMRC<cr>
-
 
 "#######################################################################
 "temporary for doing part numbers
