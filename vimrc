@@ -229,3 +229,19 @@ nnoremap ; :
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
 nnoremap <c-p> "+p
+
+"###################################################################
+"######################### plugins #################################
+"###################################################################
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'michaeljsmith/vim-indent-object'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
