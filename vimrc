@@ -223,6 +223,9 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 "make vim not correct windows/dos eof ^Z character
 set nofixendofline
 
+"make it easier to enter commands
+nnoremap ; :
+
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
 nnoremap <c-p> "+p
