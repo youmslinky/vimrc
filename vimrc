@@ -206,7 +206,7 @@ nnoremap <C-A> <Esc>:%d+<CR>
 "map <C-C> "+yiW
 
 "find what is on windows clipboard
-nnoremap <C-X> /<c-r>+<cr>
+"nnoremap <C-X> /<c-r>+<cr>
 
 "change working directory to the one the open file is in
 nnoremap <leader>cd :lcd %:p:h<cr>
