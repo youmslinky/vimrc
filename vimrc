@@ -1,10 +1,11 @@
-" youmslinky custom vimrc -----------------------------------------
+" youmslinky custom vimrc ----------------------------------------
 "-----------------------------------------------------------------
-"
 "set colorscheme
 colo slate
 
-"------------------------------------------------------------
+" based on example vimrc from: http://vim.wikia.com/wiki/Example_vimrc
+"
+"-----------------------------------------------------------------
 " Features {{{1
 "
 " These options and commands enable some very useful features in Vim, that
