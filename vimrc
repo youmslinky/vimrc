@@ -120,7 +120,7 @@ set visualbell
 set t_vb=
 
 " Enable use of the mouse for all modes
-set mouse=a
+"set mouse=a
 
 " Set the command window height to 2 lines, to avoid many cases of having to
 " "press <Enter> to continue"
@@ -165,6 +165,7 @@ map Y y$
 " Map <C-/> (redraw screen) to also turn off search highlighting until the
 " next search
 nnoremap <C-/> :nohl<CR><C-L>
+nnoremap <leader>/ :nohl<CR><C-L>
 
 "------------------------------------------------------------
 
@@ -259,6 +260,14 @@ nnoremap [t :tabprevious<cr>
 nnoremap <c-c> "+y
 nnoremap <c-p> "+p
 
+"escape from terminal
+"tnoremap <esc> <c-\><c-n>
+tnoremap jk <c-\><c-n>
+
+"stop running process and run last command in a vim terminal
+nnoremap <leader>j :call term_sendkeys(2,"\<c-c>\<up>\<cr>")<cr>
+nnoremap <leader>p :call term_sendkeys(2,"ll")<cr>
+
 "###################################################################
 "######################### plugins #################################
 "###################################################################
@@ -271,6 +280,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'michaeljsmith/vim-indent-object'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
