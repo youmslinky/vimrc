@@ -94,8 +94,18 @@ set nostartofline
 " line of a window
 set ruler
 
-" Always display the status line, even if only one window is displayed
-set laststatus=2
+" Status Line (curly braces just denote all status line commands) {  
+        set laststatus=2                             " always show statusbar  
+        set statusline=  
+        set statusline+=%-10.3n\                     " buffer number  
+        set statusline+=%f\                          " filename   
+        set statusline+=%h%m%r%w                     " status flags  
+        set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type  
+        set statusline+=%=                           " right align remainder  
+        set statusline+=0x%-8B                       " character value  
+        set statusline+=%-14(%l,%c%V%)               " line, character  
+        set statusline+=%<%P                         " file position  
+"}  
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
@@ -166,7 +176,7 @@ map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 "conflicts with <C-L> for normal :noh shortcut
-map <C-l> <C-W>l 
+map <C-l> <C-W>l
 
 "esc from insert mode with jk
 inoremap jk <Esc>
@@ -198,6 +208,7 @@ map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 
 "find something in ATL files recursively in current directory
 nnoremap <f5> :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
+nnoremap <leader>ga :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
 
 "yank and delete all text in file
 nnoremap <C-A> <Esc>:%d+<CR>
@@ -224,8 +235,26 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 set nofixendofline
 
 "make it easier to enter commands
-nnoremap ; :
+"nnoremap ; :
+nnoremap <space> :
 
+"goes to next id in atlas code
+nnoremap <leader>. /\v^\s*\d+\s<cr>:noh<cr>
+nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
+
+"switch (y) option (o) fixed (turns on scrollbind)
+nnoremap yof :set scrollbind!<cr>
+
+"exit terminal mode using esc
+tnoremap <Esc> <C-\><C-n>
+tnoremap jk <C-\><C-n>
+
+"close buffer without closing window
+nnoremap Q :bp<bar>bd #<cr>
+
+"overide unimpaired plugin next tag, prev tag
+nnoremap ]t :tabnext<cr>
+nnoremap [t :tabprevious<cr>
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
 nnoremap <c-p> "+p
