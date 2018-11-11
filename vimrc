@@ -246,10 +246,6 @@ nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
 "switch (y) option (o) fixed (turns on scrollbind)
 nnoremap yof :set scrollbind!<cr>
 
-"exit terminal mode using esc
-tnoremap <Esc> <C-\><C-n>
-tnoremap jk <C-\><C-n>
-
 "close buffer without closing window
 nnoremap Q :bp<bar>bd #<cr>
 
@@ -261,7 +257,6 @@ nnoremap <c-c> "+y
 nnoremap <c-p> "+p
 
 "escape from terminal
-"tnoremap <esc> <c-\><c-n>
 tnoremap jk <c-\><c-n>
 
 "stop running process and run last command in a vim terminal
