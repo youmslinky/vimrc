@@ -179,6 +179,12 @@ map <C-h> <C-W>h
 "conflicts with <C-L> for normal :noh shortcut
 map <C-l> <C-W>l
 
+"use alt+hjkl to resize windows
+nnoremap <M-j> <C-w>-
+nnoremap <M-k> <C-w>+
+nnoremap <M-h> <C-w><
+nnoremap <M-l> <C-w>>
+
 "esc from insert mode with jk
 inoremap jk <Esc>
 
@@ -194,6 +200,9 @@ let mapleader=","
 
 "quick save file
 nnoremap <leader>w :w<cr>
+
+"quick save file
+nnoremap <leader>q :q<cr>
 
 "edit vimrc
 nnoremap <leader>ev <C-w><C-s><C-l>:e $MYVIMRC<cr>
@@ -235,9 +244,10 @@ nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 "make vim not correct windows/dos eof ^Z character
 set nofixendofline
 
-"make it easier to enter commands
+"make it easier to enter ex commands
 "nnoremap ; :
 nnoremap <space> :
+vnoremap <space> :
 
 "goes to next id in atlas code
 nnoremap <leader>. /\v^\s*\d+\s<cr>:noh<cr>
@@ -246,8 +256,41 @@ nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
 "switch (y) option (o) fixed (turns on scrollbind)
 nnoremap yof :set scrollbind!<cr>
 
+"exit terminal mode using esc
+tnoremap jk <C-\><C-n>
+
 "close buffer without closing window
 nnoremap Q :bp<bar>bd #<cr>
+
+" Displays buffer list, prompts for buffer numbers and ranges and deletes
+" associated buffers. Example input: 2 5,9 12
+" Hit Enter alone to exit. 
+function! InteractiveBufDelete()
+    let l:prompt = "Specify buffers to delete: "
+
+    ls | let bufnums = input(l:prompt)
+    while strlen(bufnums)
+        echo "\n"
+        let buflist = split(bufnums)
+        for bufitem in buflist
+            if match(bufitem, '^\d\+,\d\+$') >= 0
+                exec ':' . bufitem . 'bd'
+            elseif match(bufitem, '^\d\+$') >= 0
+                exec ':bd ' . bufitem
+            else
+                echohl ErrorMsg | echo 'Not a number or range: ' . bufitem | echohl None
+            endif 
+        endfor
+        ls | let bufnums = input(l:prompt)
+    endwhile 
+
+endfunction
+
+"map above function
+nnoremap <silent> <leader>bd :call InteractiveBufDelete()<CR>
+
+"select buffer to switch to
+nnoremap <leader>ls :ls<cr>:b<space>
 
 "overide unimpaired plugin next tag, prev tag
 nnoremap ]t :tabnext<cr>
@@ -275,9 +318,13 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'michaeljsmith/vim-indent-object'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'justinmk/vim-sneak'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+"enable sneak label mode
 let g:sneak#label = 1
+
+"map ,, to do default ',' behaviour (also fixes f behaviour)
+map ,, <Plug>Sneak_,
