@@ -241,6 +241,9 @@ noremap <f4> :set list!<cr>
 "toggle locking cursor in middle of screen
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 
+"make horizontal scrolling offset more bearable
+set sidescrolloff=30
+
 "make vim not correct windows/dos eof ^Z character
 set nofixendofline
 
