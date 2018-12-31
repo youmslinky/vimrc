@@ -149,8 +149,8 @@ set pastetoggle=<F11>
 "
 " Indentation settings for using hard tabs for indent. Display tabs as
 " four characters wide.
-set shiftwidth=8
-set tabstop=8
+"set shiftwidth=8
+"set tabstop=8
 "
 "
 "------------------------------------------------------------
@@ -179,6 +179,9 @@ map <C-h> <C-W>h
 "conflicts with <C-L> for normal :noh shortcut
 map <C-l> <C-W>l
 
+"kludge fix for terminal split navigating
+tnoremap <c-w>j <c-w>j
+
 "use alt+hjkl to resize windows
 nnoremap <M-j> <C-w>-
 nnoremap <M-k> <C-w>+
@@ -187,6 +190,9 @@ nnoremap <M-l> <C-w>>
 
 "esc from insert mode with jk
 inoremap jk <Esc>
+
+"esc from insert mode with jk
+cnoremap jk <Esc>
 
 "automatically use relative line numbers when in command mode
 augroup numbertoggle
@@ -253,14 +259,11 @@ nnoremap <space> :
 vnoremap <space> :
 
 "goes to next id in atlas code
-nnoremap <leader>. /\v^\s*\d+\s<cr>:noh<cr>
-nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
+"nnoremap <leader>. /\v^\s*\d+\s<cr>:noh<cr>
+"nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
 
 "switch (y) option (o) fixed (turns on scrollbind)
 nnoremap yof :set scrollbind!<cr>
-
-"exit terminal mode using esc
-tnoremap jk <C-\><C-n>
 
 "close buffer without closing window
 nnoremap Q :bp<bar>bd #<cr>
@@ -308,6 +311,9 @@ tnoremap jk <c-\><c-n>
 "stop running process and run last command in a vim terminal
 nnoremap <leader>j :call term_sendkeys(2,"\<c-c>\<up>\<cr>")<cr>
 nnoremap <leader>p :call term_sendkeys(2,"ll")<cr>
+
+"retart report-bot in terminal window above
+nmap <leader>d <c-k><c-c>python report-bot.py<c-m><c-w>j
 
 "###################################################################
 "######################### plugins #################################
