@@ -172,6 +172,18 @@ nnoremap <leader>/ :nohl<CR><C-L>
 "jdk stuff 2018/9/5
 "
 "
+
+if has("win32")
+  "Windows only options here
+  "source a windows only file
+  "opens the directory of current file
+  nnoremap <leader>x :!explorer %:h<cr><cr>
+else
+  if has("unix")
+    let s:uname = system("uname")
+  endif
+endif
+
 "navigate between window split panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
