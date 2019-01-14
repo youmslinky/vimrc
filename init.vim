@@ -1,5 +1,5 @@
-"stuff the help docs told me to do
-set runtimepath^=~/.vim runtimepath+=~/.vim/after
-let &packpath = &runtimepath
-let $MYVIMRC="~/.config/nvim/vimrc" "by default, MYVIMRC is this file, but most edits will be done in the main vimrc file
-source ~/.config/nvim/vimrc
+"to use this with windows, place this file and vimrc in ~/AppData/Local/nvim/
+source ~/AppData/Local/nvim/vimrc
+"this line makes it so when you edit $MYVIMRC you are pointed to the real one,
+"not this init.vim file
+let $MYVIMRC="~/AppData/Local/nvim/vimrc"
