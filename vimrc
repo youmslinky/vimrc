@@ -347,5 +347,8 @@ call plug#end()
 "enable sneak label mode
 let g:sneak#label = 1
 
+"vim sneak use smartcase
+let g:sneak#use_ic_scs = 1
+
 "map ,, to do default ',' behaviour (also fixes f behaviour)
 map ,, <Plug>Sneak_,
