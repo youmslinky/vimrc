@@ -346,7 +346,7 @@ nmap <leader>d <c-k><c-c>python report-bot.py<c-m><c-w>j
 "###################################################################
 
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
+call plug#begin()
 
 " Declare the list of plugins.
 Plug 'tpope/vim-repeat'
