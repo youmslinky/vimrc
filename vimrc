@@ -1,5 +1,10 @@
 " youmslinky custom vimrc ----------------------------------------
 "-----------------------------------------------------------------
+
+"set leader to ','
+"this is set early so all commands follow it
+let mapleader=","
+
 "set colorscheme
 colo slate
 
@@ -226,9 +231,6 @@ augroup numbertoggle
   autocmd BufEnter,FocusGained,InsertLeave,WinEnter * if &nu | set rnu   | endif
   autocmd BufLeave,FocusLost,InsertEnter,WinLeave   * if &nu | set nornu | endif
 augroup END
-
-"set leader to ','
-let mapleader=","
 
 "quick save file
 nnoremap <leader>w :w<cr>
