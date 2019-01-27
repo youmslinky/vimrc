@@ -274,6 +274,7 @@ noremap <f4> :set list!<cr>
 
 "toggle locking cursor in middle of screen
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <Leader>hh :let &sidescrolloff=999-&sidescrolloff<CR>
 
 "make horizontal scrolling offset more bearable
 set sidescrolloff=30
