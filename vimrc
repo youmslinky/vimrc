@@ -327,9 +327,6 @@ nnoremap <silent> <leader>bd :call InteractiveBufDelete()<CR>
 "select buffer to switch to
 nnoremap <leader>ls :ls<cr>:b<space>
 
-"overide unimpaired plugin next tag, prev tag
-nnoremap ]t :tabnext<cr>
-nnoremap [t :tabprevious<cr>
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
 nnoremap <c-p> "+p
@@ -361,6 +358,11 @@ Plug 'justinmk/vim-sneak'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+"overide unimpaired plugin next tag, prev tag
+nnoremap ]t :tabnext<cr>
+nnoremap [t :tabprevious<cr>
+
 "enable sneak label mode
 let g:sneak#label = 1
 
