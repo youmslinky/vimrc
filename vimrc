@@ -254,9 +254,6 @@ map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
 nnoremap <f5> :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
 nnoremap <leader>ga :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
 
-"yank and delete all text in file
-nnoremap <C-A> <Esc>:%d+<CR>
-
 "yank entire word under cursor to clipboard
 "map <C-C> "+yiW
 
