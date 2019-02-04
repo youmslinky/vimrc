@@ -232,7 +232,7 @@ augroup END
 "quick save file
 nnoremap <leader>w :w<cr>
 
-"quick save file
+"quick quit file
 nnoremap <leader>q :q<cr>
 
 "edit vimrc
