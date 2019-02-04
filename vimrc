@@ -222,9 +222,6 @@ nnoremap <M-l> <C-w>>
 "esc from insert mode with jk
 inoremap jk <Esc>
 
-"esc from insert mode with jk
-cnoremap jk <Esc>
-
 "automatically use relative line numbers when in command mode
 augroup numbertoggle
   autocmd!
