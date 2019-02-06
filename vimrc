@@ -349,6 +349,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'michaeljsmith/vim-indent-object'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'justinmk/vim-sneak'
+Plug 'justinmk/vim-dirvish'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
