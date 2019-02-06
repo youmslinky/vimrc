@@ -319,7 +319,7 @@ endfunction
 nnoremap <silent> <leader>bd :call InteractiveBufDelete()<CR>
 
 "select buffer to switch to
-nnoremap <leader>ls :ls<cr>:b<space>
+nnoremap <leader>l :ls<cr>:b<space>
 
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
