@@ -2,6 +2,10 @@
 "################ youmslinky custom vimrc ##########################
 "###################################################################
 
+"set leader to ','
+"this is set early so all commands follow it
+let mapleader=","
+
 "###################################################################
 "######################### plugins #################################
 "###################################################################
@@ -33,14 +37,13 @@ let g:sneak#use_ic_scs = 1
 
 "map ,, to do default ',' behaviour (also fixes f behaviour)
 map ,, <Plug>Sneak_,
+"
+"toggle mundo
+nnoremap <leader>m :MundoToggle<cr>
 
 "##################
 "End plugin options
 "##################
-"
-"set leader to ','
-"this is set early so all commands follow it
-let mapleader=","
 
 "set colorscheme
 colo slate
