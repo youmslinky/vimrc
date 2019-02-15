@@ -22,6 +22,7 @@ Plug 'michaeljsmith/vim-indent-object'
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'simnalamburt/vim-mundo'
+Plug 'dbeniamine/cheat.sh-vim'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
