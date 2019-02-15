@@ -1,6 +1,43 @@
-" youmslinky custom vimrc ----------------------------------------
-"-----------------------------------------------------------------
+"###################################################################
+"################ youmslinky custom vimrc ##########################
+"###################################################################
 
+"###################################################################
+"######################### plugins #################################
+"###################################################################
+
+" Plugins will be downloaded under the specified directory.
+call plug#begin()
+
+" Declare the list of plugins.
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'michaeljsmith/vim-indent-object'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+Plug 'justinmk/vim-sneak'
+Plug 'justinmk/vim-dirvish'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
+"overide unimpaired plugin next tag, prev tag
+nnoremap ]t :tabnext<cr>
+nnoremap [t :tabprevious<cr>
+
+"enable sneak label mode
+let g:sneak#label = 1
+
+"vim sneak use smartcase
+let g:sneak#use_ic_scs = 1
+
+"map ,, to do default ',' behaviour (also fixes f behaviour)
+map ,, <Plug>Sneak_,
+
+"##################
+"End plugin options
+"##################
+"
 "set leader to ','
 "this is set early so all commands follow it
 let mapleader=","
@@ -339,36 +376,15 @@ nnoremap <leader>j :call term_sendkeys(2,"\<c-c>\<up>\<cr>")<cr>
 nnoremap <leader>p :call term_sendkeys(2,"ll")<cr>
 
 "retart report-bot in terminal window above
-nmap <leader>d <c-k><c-c>python report-bot.py<c-m><c-w>j
+nmap <leader>rb <c-k><c-c>python report-bot.py<c-m><c-w>j
 
-"###################################################################
-"######################### plugins #################################
-"###################################################################
-
-" Plugins will be downloaded under the specified directory.
-call plug#begin()
-
-" Declare the list of plugins.
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
-Plug 'michaeljsmith/vim-indent-object'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
-Plug 'justinmk/vim-sneak'
-Plug 'justinmk/vim-dirvish'
-
-" List ends here. Plugins become visible to Vim after this call.
-call plug#end()
-
-"overide unimpaired plugin next tag, prev tag
-nnoremap ]t :tabnext<cr>
-nnoremap [t :tabprevious<cr>
-
-"enable sneak label mode
-let g:sneak#label = 1
-
-"vim sneak use smartcase
-let g:sneak#use_ic_scs = 1
-
-"map ,, to do default ',' behaviour (also fixes f behaviour)
-map ,, <Plug>Sneak_,
+" Let's save undo info!
+if !isdirectory($HOME."/.vim")
+    call mkdir($HOME."/.vim", "", 0770)
+endif
+" put undo files in .vim folder
+if !isdirectory($HOME."/.vim/undo-dir")
+    call mkdir($HOME."/.vim/undo-dir", "", 0700)
+endif
+set undodir=~/.vim/undo-dir
+set undofile
