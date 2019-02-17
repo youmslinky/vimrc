@@ -17,12 +17,14 @@ call plug#begin()
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-fugitive'
 Plug 'michaeljsmith/vim-indent-object'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'justinmk/vim-sneak'
 Plug 'justinmk/vim-dirvish'
 Plug 'simnalamburt/vim-mundo'
 Plug 'dbeniamine/cheat.sh-vim'
+Plug 'mhinz/vim-signify'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
