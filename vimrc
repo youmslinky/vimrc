@@ -25,9 +25,15 @@ Plug 'justinmk/vim-dirvish'
 Plug 'simnalamburt/vim-mundo'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'mhinz/vim-signify'
+Plug 'w0rp/ale'
+Plug 'vim-python/python-syntax'
+Plug 'reedes/vim-pencil'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
+
+"enable all vim-python syntax highlighting
+let g:python_highlight_all = 1
 
 "overide unimpaired plugin next tag, prev tag
 nnoremap ]t :tabnext<cr>
