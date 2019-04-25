@@ -316,6 +316,9 @@ set listchars=eol:¶,tab:>-,trail:.,extends:>,precedes:<,nbsp:_
 "toggle viewing tabs and spaces
 noremap <f4> :set list!<cr>
 
+"get rid of annoying autoformat comment leaders
+autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+
 "toggle locking cursor in middle of screen
 nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
 nnoremap <Leader>hh :let &sidescrolloff=999-&sidescrolloff<CR>
