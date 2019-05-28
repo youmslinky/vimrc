@@ -338,8 +338,8 @@ nnoremap <space> :
 vnoremap <space> :
 
 "goes to next id in atlas code
-"nnoremap <leader>. /\v^\s*\d+\s<cr>:noh<cr>
-"nnoremap <leader>m ?\v^\s*\d+\s<cr>:noh<cr>
+nnoremap <leader>. /\v(^\s+)@<=\d+<cr>:noh<cr>
+nnoremap <leader>m ?\v(^\s+)@<=\d+<cr>:noh<cr>
 
 "switch (y) option (o) fixed (turns on scrollbind)
 nnoremap yof :set scrollbind!<cr>
