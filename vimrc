@@ -112,6 +112,9 @@ set hidden
 " Better command-line completion
 set wildmenu
 
+"ignore case with completion
+set wildignorecase
+
 " Show partial commands in the last line of the screen
 set showcmd
 
