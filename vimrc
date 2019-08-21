@@ -53,7 +53,7 @@ let g:sneak#use_ic_scs = 1
 map ,, <Plug>Sneak_,
 "
 "toggle mundo
-nnoremap <leader>m :MundoToggle<cr>
+nnoremap <leader>M :MundoToggle<cr>
 
 "##################
 "End plugin options
@@ -411,3 +411,6 @@ if !isdirectory($HOME."/.vim/undo-dir")
 endif
 set undodir=~/.vim/undo-dir
 set undofile
+
+" make command
+nnoremap <leader>m :!make<cr>
