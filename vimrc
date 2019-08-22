@@ -28,10 +28,12 @@ Plug 'mhinz/vim-signify'
 Plug 'w0rp/ale'
 Plug 'vim-python/python-syntax'
 Plug 'reedes/vim-pencil'
-
 Plug 'kana/vim-textobj-user'
 "numeral textobjects 2.2 3e6 etc
 Plug 'tkhren/vim-textobj-numeral'
+Plug 'dhruvasagar/vim-dotoo'
+Plug 'AndrewRadev/linediff.vim'
+Plug 'dhruvasagar/vim-table-mode'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
