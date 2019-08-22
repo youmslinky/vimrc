@@ -398,7 +398,8 @@ nnoremap <leader>l :ls<cr>:b<space>
 
 "copy and paste to system clipboard
 nnoremap <c-c> "+y
-nnoremap <c-p> "+P
+"disabled because ^c needed to interupt long running commands
+"nnoremap <c-p> "+P
 
 "escape from terminal
 tnoremap jk <c-\><c-n>
