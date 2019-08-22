@@ -295,7 +295,7 @@ nnoremap <leader>w :w<cr>
 nnoremap <leader>q :q<cr>
 
 "edit vimrc
-nnoremap <leader>ev <C-w><C-s><C-l>:e $MYVIMRC<cr>
+nnoremap <leader>ev :sp $MYVIMRC<cr>
 
 "reload vimrc
 nnoremap <leader>rv :so $MYVIMRC<cr>
