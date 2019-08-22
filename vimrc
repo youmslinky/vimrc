@@ -350,8 +350,15 @@ nnoremap <space> :
 vnoremap <space> :
 
 "goes to next id in atlas code
-nnoremap <leader>. /\v(^\s+)@<=\d+<cr>:noh<cr>
-nnoremap <leader>m ?\v(^\s+)@<=\d+<cr>:noh<cr>
+"pattern is taken from atlas.vim file for id number
+"TODO put these in a file only sourced when .ATL is opened
+nnoremap <leader>. /^[BE ][ 0-9]\{,6}\><cr>:noh<cr> 
+nnoremap <leader>m ?^[BE ][ 0-9]\{,6}\><cr>:noh<cr>
+
+"goes to next testid = ... statement
+"uses search() to avoid polluting search history and not overwriting current search
+nnoremap <silent> <leader>. :call search("testid = ",'W')<cr>
+nnoremap <silent> <leader>m :call search("testid = ",'Wb')<cr>
 
 "switch (y) option (o) fixed (turns on scrollbind)
 nnoremap yof :set scrollbind!<cr>
