@@ -319,6 +319,9 @@ nnoremap <leader>ga :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> c
 "change working directory to the one the open file is in
 nnoremap <leader>cd :lcd %:p:h<cr>
 
+"create folders if they don't exist when writing file
+au BufWritePre,FileWritePre * silent! call mkdir(expand('<afile>:p:h'), 'p')
+
 " highlight tabs and trailing spaces
 set listchars=tab:>-,trail:-
 set listchars=eol:¶,tab:>-,trail:.,extends:>,precedes:<,nbsp:_
