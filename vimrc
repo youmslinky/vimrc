@@ -34,6 +34,7 @@ Plug 'tkhren/vim-textobj-numeral'
 Plug 'dhruvasagar/vim-dotoo'
 Plug 'AndrewRadev/linediff.vim'
 Plug 'dhruvasagar/vim-table-mode'
+Plug '~/.fzf'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
