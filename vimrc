@@ -399,7 +399,7 @@ nnoremap <silent> <leader>bd :call InteractiveBufDelete()<CR>
 nnoremap <leader>l :ls<cr>:b<space>
 
 "copy and paste to system clipboard
-nnoremap <c-c> "+y
+"nnoremap <c-c> "+y
 "disabled because ^c needed to interupt long running commands
 "nnoremap <c-p> "+P
 
