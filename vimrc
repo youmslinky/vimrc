@@ -407,6 +407,9 @@ tnoremap jk <c-\><c-n>
 
 "insert date in format: 'Feb 7, 2019'
 nnoremap <leader>d :put =strftime('%b %d, %Y')<cr>kJ
+"insert full datetime
+nnoremap <leader>d :put =strftime('%a %x %X')<cr>
+
 
 "stop running process and run last command in a vim terminal
 nnoremap <leader>j :call term_sendkeys(2,"\<c-c>\<up>\<cr>")<cr>
