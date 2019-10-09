@@ -313,7 +313,7 @@ nnoremap <leader>ga :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> c
 "nnoremap <C-X> /<c-r>+<cr>
 
 "change working directory to the one the open file is in
-nnoremap <leader>cd :lcd %:p:h<cr>
+nnoremap <silent> <leader>cd :lcd %:p:h<cr>
 
 "create folders if they don't exist when writing file
 au BufWritePre,FileWritePre * silent! call mkdir(expand('<afile>:p:h'), 'p')
@@ -321,15 +321,13 @@ au BufWritePre,FileWritePre * silent! call mkdir(expand('<afile>:p:h'), 'p')
 " highlight tabs and trailing spaces
 set listchars=tab:>-,trail:-
 set listchars=eol:¶,tab:>-,trail:.,extends:>,precedes:<,nbsp:_
-"toggle viewing tabs and spaces
-noremap <f4> :set list!<cr>
 
 "get rid of annoying autoformat comment leaders
 autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
 
 "toggle locking cursor in middle of screen
-nnoremap <Leader>zz :let &scrolloff=999-&scrolloff<CR>
-nnoremap <Leader>hh :let &sidescrolloff=999-&sidescrolloff<CR>
+nnoremap <silent> <Leader>zz :let &scrolloff=999-&scrolloff<CR>
+nnoremap <silent> <Leader>hh :let &sidescrolloff=999-&sidescrolloff<CR>
 
 "lock cursor in middle of screen by default
 set scrolloff=999
@@ -357,10 +355,10 @@ nnoremap <silent> <leader>. :call search("testid = ",'W')<cr>
 nnoremap <silent> <leader>m :call search("testid = ",'Wb')<cr>
 
 "switch (y) option (o) fixed (turns on scrollbind)
-nnoremap yof :set scrollbind!<cr>
+nnoremap <silent> yof :set scrollbind!<cr>
 
 "close buffer without closing window
-nnoremap Q :bp<bar>bd #<cr>
+nnoremap <silent> Q :bp<bar>bd #<cr>
 
 " Displays buffer list, prompts for buffer numbers and ranges and deletes
 " associated buffers. Example input: 2 5,9 12
@@ -401,9 +399,9 @@ nnoremap <leader>l :ls<cr>:b<space>
 tnoremap jk <c-\><c-n>
 
 "insert date in format: 'Feb 7, 2019'
-nnoremap <leader>d :put =strftime('%b %d, %Y')<cr>kJ
+nnoremap <silent> <leader>d :put =strftime('%b %d, %Y')<cr>kJ
 "insert full datetime
-nnoremap <leader>d :put =strftime('%a %x %X')<cr>
+nnoremap <silent> <leader>d :put =strftime('%a %x %X')<cr>
 
 
 "stop running process and run last command in a vim terminal
