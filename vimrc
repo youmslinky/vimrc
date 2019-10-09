@@ -302,12 +302,6 @@ nnoremap <leader>ev :sp $MYVIMRC<cr>
 "reload vimrc
 nnoremap <leader>rv :so $MYVIMRC<cr>
 
-"#######################################################################
-"temporary for doing part numbers
-map <f2> 0/\<cr>9f\lyt\<C-k>po<esc><C-w>jj
-
-"#######################################################################
-
 "find something in ATL files recursively in current directory
 nnoremap <f5> :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
 nnoremap <leader>ga :exec 'vimgrep /'.input('grep what? ').'/ ./**/*.ATL <bar> cw'<cr>
