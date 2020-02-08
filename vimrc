@@ -268,6 +268,9 @@ else
   endif
 endif
 
+"split like any other program
+set splitright splitbelow
+
 "navigate between window split panes
 map <C-j> <C-W>j
 map <C-k> <C-W>k
