@@ -332,8 +332,8 @@ au BufWritePre,FileWritePre * silent! call mkdir(expand('<afile>:p:h'), 'p')
 set listchars=tab:>-,trail:-
 set listchars=eol:¶,tab:>-,trail:.,extends:>,precedes:<,nbsp:_
 
-"get rid of annoying autoformat comment leaders
-autocmd BufNewFile,BufRead * setlocal formatoptions-=cro
+" Disables automatic commenting on newline:
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 "toggle locking cursor in middle of screen
 nnoremap <silent> <Leader>zz :let &scrolloff=999-&scrolloff<CR>
