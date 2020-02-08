@@ -164,18 +164,18 @@ set nostartofline
 " line of a window
 set ruler
 
-" Status Line (curly braces just denote all status line commands) {  
-        set laststatus=2                             " always show statusbar  
-        set statusline=  
-        set statusline+=%-10.3n\                     " buffer number  
-        set statusline+=%f\                          " filename   
-        set statusline+=%h%m%r%w                     " status flags  
-        set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type  
-        set statusline+=%=                           " right align remainder  
-        set statusline+=0x%-8B                       " character value  
-        set statusline+=%-14(%l,%c%V%)               " line, character  
-        set statusline+=%<%P                         " file position  
-"}  
+" Status Line (curly braces just denote all status line commands) {
+        set laststatus=2                             " always show statusbar
+        set statusline=
+        set statusline+=%-10.3n\                     " buffer number
+        set statusline+=%f\                          " filename
+        set statusline+=%h%m%r%w                     " status flags
+        set statusline+=\[%{strlen(&ft)?&ft:'none'}] " file type
+        set statusline+=%=                           " right align remainder
+        set statusline+=0x%-8B                       " character value
+        set statusline+=%-14(%l,%c%V%)               " line, character
+        set statusline+=%<%P                         " file position
+"}
 
 " Instead of failing a command because of unsaved changes, instead raise a
 " dialogue asking if you wish to save changed files.
@@ -350,7 +350,7 @@ vnoremap <space> :
 "goes to next id in atlas code
 "pattern is taken from atlas.vim file for id number
 "TODO put these in a file only sourced when .ATL is opened
-nnoremap <leader>. /^[BE ][ 0-9]\{,6}\><cr>:noh<cr> 
+nnoremap <leader>. /^[BE ][ 0-9]\{,6}\><cr>:noh<cr>
 nnoremap <leader>m ?^[BE ][ 0-9]\{,6}\><cr>:noh<cr>
 
 "goes to next testid = ... statement
@@ -366,7 +366,7 @@ nnoremap <silent> Q :bp<bar>bd #<cr>
 
 " Displays buffer list, prompts for buffer numbers and ranges and deletes
 " associated buffers. Example input: 2 5,9 12
-" Hit Enter alone to exit. 
+" Hit Enter alone to exit.
 function! InteractiveBufDelete()
     let l:prompt = "Specify buffers to delete: "
 
@@ -381,10 +381,10 @@ function! InteractiveBufDelete()
                 exec ':bd ' . bufitem
             else
                 echohl ErrorMsg | echo 'Not a number or range: ' . bufitem | echohl None
-            endif 
+            endif
         endfor
         ls | let bufnums = input(l:prompt)
-    endwhile 
+    endwhile
 
 endfunction
 
