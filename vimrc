@@ -27,6 +27,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-commentary'
 Plug 'michaeljsmith/vim-indent-object'
 "Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'justinmk/vim-sneak'
