@@ -46,6 +46,7 @@ Plug 'AndrewRadev/linediff.vim'
 Plug 'dhruvasagar/vim-table-mode'
 Plug '~/.fzf'
 Plug 'rickhowe/diffchar.vim'
+Plug 'roxma/vim-tmux-clipboard'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
